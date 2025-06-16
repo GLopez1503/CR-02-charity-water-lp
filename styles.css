@@ -41,16 +41,64 @@ section {
   padding: 24px 16px;
 }
 
+/* Top White Bar Styles */
+.top-bar {
+  /* This is the white bar at the top */
+  width: 100%;
+  background: #fff;
+  display: flex; /* Arrange items in a row */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space out logo, headline, and button */
+  padding: 12px 24px;
+  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07); /* Soft shadow */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo image styles */
+.logo {
+  height: 40px; /* Adjust logo size as needed */
+}
+
+/* Headline in the top bar */
+.top-headline {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #2E9DF7; /* Primary blue */
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+/* Call to Action Button in the top bar */
+.top-cta-button {
+  background-color: #FFC907; /* Bright yellow */
+  color: #222;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-left: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.top-cta-button:hover {
+  background-color: #e6b800;
+}
+
 /* Hero Section Styles */
 .hero {
   position: relative; /* Needed for overlay */
   /* Set a background image that covers the whole section */
-  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');
+  background-image: url('https://cdn2.dropmarkusercontent.com/52043/03c2e254d0e0b826df59d8b4fc5524b5f0bfc3d832938268181bb2a14c43e844/preview/Zimbabwe_2022_CG-7848.jpg?Expires=1750037364&Signature=T-FKm5FKsTmKKcC45j0GGC6vNRbOBVmYf~3bNFuu2WbNQdLEaUpH5nKDejNcB9xSLdHPXhr7BVEC1lmWJhpjTvOXC4AEHspSSRXqvlVBx3e7VU~ohO4YyqxnzEi19XqWwRio-Ro9gTfYfgnGagmTP7GCz4S-Hmkdls-oLTgO~iAjuwUiDry93KJp4TqkmAeO5kJkL7vXM8Xwu0nVNvy1XEiZZlRx5ZIPyq6hNZhnXVt-AknXluX7UauyTtksLx35farwHeXLJLDPiufZLXYuq2pcnBhbe7DKQq5R7ItCP9GGkQAU1sBYbryMDnJMFHj2~MIqx9bl8w1zbEWD40gOZQ__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ');
   background-size: cover;      /* Make the image cover the whole area */
   background-position: center; /* Center the image */
   background-repeat: no-repeat;
   color: #fff;                 /* White text for contrast */
-  text-align: center;          /* Center the text */
+  text-align: left;          /* Center the text */
   padding: 60px 20px;          /* Add space above and below */
   border-radius: 0 0 16px 16px; /* Only round bottom corners */
 
@@ -79,21 +127,21 @@ section {
 /* Story Section Styles */
 .story {
   background-color: #8BD1CB; /* Secondary Light Blue */
-  color: #222;
+  color: #000000;
   text-align: center;
   padding: 30px 20px;
 }
 
 /* Add accent color to section headings */
 h2 {
-  color: #2E9DF7; /* Primary blue */
-  margin-top: 0;
+  color: #000000; /* Primary blue */
+  margin-top: 3;
   font-weight: bold;
 }
 
 /* Call-to-Action Section Styles */
 .call-to-action {
-  background-color: #FFC907; /* Primary Yellow */
+  background-color: #8BD1CB; /* Primary Yellow */
   color: #222;
   text-align: center;
   padding: 30px 20px;
@@ -111,8 +159,8 @@ h2 {
 /* Donate Button Styles */
 .donate-button {
   display: inline-block;
-  background-color: #4FCB53; /* Green */
-  color: #fff;
+  background-color: #FFC907; /* Green */
+  color: #000000;
   padding: 14px 32px;
   text-decoration: none;
   border-radius: 6px;
@@ -176,6 +224,23 @@ section {
   .impact-image {
     width: 90%;    /* Make image take up most of the width */
     max-width: 220px;
+  }
+
+  /* Responsive Top Bar: Adjusts layout for smaller screens */
+  .top-bar {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+    padding: 10px 8px;
+  }
+  .logo {
+    height: 32px; /* Make logo smaller on small screens */
+    margin-bottom: 8px;
+  }
+  .top-cta-button {
+    width: 100%; /* Make button full width */
+    margin: 8px 0 0 0;
+    padding: 10px 0;
+    text-align: center;
   }
 }
 
